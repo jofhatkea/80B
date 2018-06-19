@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+
+</head>
+
+<body>
+    <!-- https://reactjs.org/docs/cdn-links.html -->
+    <!-- https://stackoverflow.com/questions/43931538/how-to-load-es6-react-babel-code-in-html-with-cdn -->
+    <div id="app"></div>
+
+    <h3>Steps</h3>
+    <ul>
+        <li>CDN</li>
+        <li>ReactDOM.render</li>
+        <li>functional component, just need to know they exist</li>
+        <li>Reuse functional component => error</li>
+        <li>Add div with class => error</li>
+        <li>Swicth to className</li>
+        <li>Pass props to functional component</li>
+    </ul>
+    <script type="text/babel">
+        window.addEventListener("load", () => {
+            function Greetings(props) {
+                return <h1>Hello, {props.name}</h1>;
+            }
+
+            const element = (
+                <div className="messages">
+                    <Greetings name="Sara" />
+                    <Greetings name="Jonas" />
+                </div>
+            );
+            ReactDOM.render(
+                element,
+                document.getElementById('app')
+            );
+        });
+    </script>
+</body>
+
+</html>
