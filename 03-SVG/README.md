@@ -38,9 +38,11 @@
 #### ANdet, ved ikke hvor endnu
 
 - Chart.js? or similar
+
   - focus on changing existing data to suit chart.js
   - It's not always easier if you need customization
   - lær det selv?
+  - https://developers.google.com/chart/
 
 #### CSS
 
